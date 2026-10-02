@@ -1,0 +1,36 @@
+{
+  "_comment": "MOCK FIXTURE ONLY \u2014 not a live Orcfax statement; not a Preview tx receipt. Shape mirrors docs.orcfax.io/consume Statement + CER Rational. Do not invent spend success from this file.",
+  "_honesty": "Shaky if treated as live Preview freshness; Solid only as schema teaching aid.",
+  "_network_hint": "local-emulator-or-offline-fetcher",
+  "_not": [
+    "live-orcfax",
+    "mainnet",
+    "cip-30",
+    "spend-success"
+  ],
+  "statement": {
+    "feed_id": "CER/ADA-USD/",
+    "created_at": 0,
+    "body": {
+      "num": 1,
+      "denom": 1
+    }
+  },
+  "statement_teaching_notes": {
+    "feed_id_note": "Prefix match must include trailing slash after feed name per consume docs. Live scout samples used versioned ids like CER/MIN-ADA/3 \u2014 treat versioned form as possible.",
+    "created_at_note": "Placeholder 0 \u2014 replace with a practice POSIX ms only for local drills; never claim this equals live Preview publish time.",
+    "body_note": "Toy 1/1 CER (current exchange rate) Rational for shape tests only.",
+    "body_type_teaching": "CER_Rational \u2014 teaching label only; not part of the on-chain Statement schema sample above."
+  },
+  "protocol_shape_hints": {
+    "fsp_token_name_hex": "000de140",
+    "fs_token_name": "",
+    "preview_fsp_active_docs": "0690081bc113f74e04640ea78a87d88abbd2f18831c44c4064524230",
+    "preview_fs_active_docs": "e6c8a314ae942401619460f00c69de3d1b996db588d4042243a4b259",
+    "hashes_note": "Copied from sibling orcfax-preview-consume-sketch VERSIONS (docs re-fetch 2026-09-27 PT). Documented deployment ids \u2014 not proof of fresh FS UTxOs."
+  },
+  "upstream_mock": {
+    "prefer": "https://github.com/orcfax/orcfax-examples (./mock)",
+    "docs": "https://docs.orcfax.io/consume"
+  }
+}
